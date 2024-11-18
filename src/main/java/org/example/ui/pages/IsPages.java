@@ -88,7 +88,7 @@ public class IsPages extends VerticalLayout {
                     yeniIs.setOnayDurumu(onayDurumu);
                     yeniIs.setTamamlananSure(tamamlananSure);
                     isService.save(yeniIs);
-                    tableField.addItem(new Object[]{yeniIs.getId(), baslik,cozenKisi,birim, aciklama, tarih, onayDurumu, tamamlananSure}, yeniIs.getId());
+                    tableField.addItem(new Object[]{yeniIs.getId(),aciklama, baslik,cozenKisi,birim, tarih, onayDurumu, tamamlananSure}, yeniIs.getId());
                     clearFields();
                     fillTable();
                     Notification.show("Kayıt başarıyla eklendi", Notification.Type.TRAY_NOTIFICATION);

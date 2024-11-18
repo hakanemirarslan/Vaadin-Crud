@@ -5,6 +5,7 @@ import com.vaadin.ui.Notification;
 import org.example.core.dao.PersonelDao;
 import org.example.core.dao.utils.HibernateUtil;
 
+import org.example.core.entity.Is;
 import org.example.core.entity.Personel;
 
 import org.example.core.entity.dto.PersonelDto;

@@ -24,15 +24,17 @@ public class Is extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private EnumOnayDurumu onayDurumu;
 
-    @ManyToOne(cascade = /* CascadeType.ALL */{CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = /* CascadeType.ALL */{CascadeType.DETACH, CascadeType.MERGE,
+            CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.REMOVE}, fetch = FetchType.EAGER)
     @JoinColumn(name = "cozen_kisi_id")
     private Personel cozenKisi;
 
-    @ManyToOne(cascade = /*CascadeType.ALL*/ {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = /*CascadeType.ALL*/ {CascadeType.DETACH, CascadeType.MERGE,
+            CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "yazar_id")
     private Personel yazar;
 
-    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "birim_id")
     private Birim birim;
 

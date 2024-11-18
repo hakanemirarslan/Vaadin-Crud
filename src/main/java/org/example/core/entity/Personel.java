@@ -20,6 +20,9 @@ public class Personel extends BaseEntity {
 
     private String password;
 
+    @OneToMany(mappedBy = "cozenKisi", cascade = CascadeType.ALL)
+    private List<Is> isler;
+
     public Personel() {
     }
 
@@ -60,5 +63,11 @@ public class Personel extends BaseEntity {
         this.password = password;
     }
 
+    public List<Is> getIsler() {
+        return isler;
+    }
 
+    public void setIsler(List<Is> isler) {
+        this.isler = isler;
+    }
 }
