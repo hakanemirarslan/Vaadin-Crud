@@ -20,13 +20,6 @@ public class Personel extends BaseEntity {
 
     private String password;
 
-    @OneToMany(mappedBy = "yazar", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Is> yapilanIsler = new ArrayList<>();
-
-//
-//    @OneToMany(mappedBy = "cozenKisi", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<Is> cozulenIsler = new ArrayList<>();
-
     public Personel() {
     }
 
@@ -67,19 +60,5 @@ public class Personel extends BaseEntity {
         this.password = password;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        Personel that = (Personel) o;
-//
-//        return getId().equals(that.getId());
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return getId().hashCode();
-//    }
 
 }

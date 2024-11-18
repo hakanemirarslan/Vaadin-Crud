@@ -12,7 +12,6 @@ public class Birim extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //255
     @Column(length = 200)
     private String name;
 
@@ -20,8 +19,6 @@ public class Birim extends BaseEntity {
     public String toString() {
         return  name;
     }
-
-
 
     public Long getId() {
         return id;
@@ -38,17 +35,5 @@ public class Birim extends BaseEntity {
     public void setName(String name) {
         this.name = name;
     }
-//    @Override
-//    public boolean equals(Object o){
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        Birim that = (Birim) o;
-//        return getId().equals(that.getId());
-//    }
-//
-//    @Override
-//    public int hashCode(){
-//        return getId().hashCode();
-//    }
+
 }
